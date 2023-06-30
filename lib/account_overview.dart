@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AccountOverView extends StatelessWidget {
   const AccountOverView({Key key}) : super(key: key);
@@ -70,18 +71,16 @@ class _HomeState extends State<Home> {
                     ),
                     Column(
                       children: [
-                        Text(
-                          'Good morning',
-                          style: TextStyle(fontSize: 17),
-                        ),
+                        Text('Good morning',
+                            style: GoogleFonts.rubik(fontSize: 17)),
                         SizedBox(
                           height: 10,
                         ),
                         Text(
                           '08195648213',
-                          style: TextStyle(
-                              fontWeight: FontWeight.w700, fontSize: 17),
-                        )
+                          style: GoogleFonts.rubik(
+                              fontSize: 17, fontWeight: FontWeight.w700),
+                        ),
                       ],
                     )
                   ],
@@ -107,7 +106,7 @@ class _HomeState extends State<Home> {
                           children: [
                             Text(
                               'Jumlah Point',
-                              style: TextStyle(
+                              style: GoogleFonts.rubik(
                                   fontSize: 18, fontWeight: FontWeight.w400),
                             ),
                             SizedBox(
@@ -115,7 +114,7 @@ class _HomeState extends State<Home> {
                             ),
                             Text(
                               '12.000',
-                              style: TextStyle(
+                              style: GoogleFonts.rubik(
                                   fontSize: 35, fontWeight: FontWeight.w700),
                             )
                           ],
@@ -138,7 +137,7 @@ class _HomeState extends State<Home> {
                           children: [
                             Text(
                               '3452 1235 7894 1678',
-                              style: TextStyle(
+                              style: GoogleFonts.rubik(
                                   fontSize: 20,
                                   fontWeight: FontWeight.w700,
                                   color: Colors.white),
@@ -147,7 +146,7 @@ class _HomeState extends State<Home> {
                               height: 5,
                             ),
                             Text('05/2025',
-                                style: TextStyle(
+                                style: GoogleFonts.rubik(
                                     fontSize: 17, color: Colors.white))
                           ],
                         ),
@@ -162,7 +161,7 @@ class _HomeState extends State<Home> {
                   margin: EdgeInsets.fromLTRB(24, 0, 24, 0),
                   child: Text(
                     "LAST TRANSACTIONS",
-                    style: TextStyle(
+                    style: GoogleFonts.rubik(
                         fontWeight: FontWeight.w700,
                         fontSize: 15,
                         color: Color(0xFF858585)),
