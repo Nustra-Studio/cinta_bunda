@@ -30,7 +30,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFF5F5F5).withOpacity(0.8),
+      backgroundColor: Colors.white.withOpacity(0.9),
       body: Stack(
         children: [
           Positioned(
@@ -139,7 +139,7 @@ class _HomeState extends State<Home> {
                               '3452 1235 7894 1678',
                               style: GoogleFonts.rubik(
                                   fontSize: 20,
-                                  fontWeight: FontWeight.w700,
+                                  fontWeight: FontWeight.w500,
                                   color: Colors.white),
                             ),
                             SizedBox(
