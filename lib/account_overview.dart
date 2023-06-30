@@ -168,8 +168,102 @@ class _HomeState extends State<Home> {
                   ),
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 10,
                 ),
+                Container(
+                  margin: EdgeInsets.symmetric(horizontal: 20),
+                  child: Column(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.only(bottom: 10),
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(10)),
+                        child: ListTile(
+                          contentPadding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                          title: Text("Jilbab Coklat",
+                              style: GoogleFonts.rubik(
+                                  fontSize: 16, fontWeight: FontWeight.w600)),
+                          subtitle: Text("Tue 12.10.2023",
+                              style:
+                                  GoogleFonts.rubik(color: Color(0xFF858585))),
+                          trailing: Text(
+                            "RP.12.500",
+                            style: GoogleFonts.rubik(
+                                fontSize: 16, fontWeight: FontWeight.w600),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(bottom: 10),
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(10)),
+                        child: ListTile(
+                          contentPadding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                          title: Text("Jilbab Coklat",
+                              style: GoogleFonts.rubik(
+                                  fontSize: 16, fontWeight: FontWeight.w600)),
+                          subtitle: Text("Tue 12.10.2023",
+                              style:
+                                  GoogleFonts.rubik(color: Color(0xFF858585))),
+                          trailing: Text(
+                            "RP.12.500",
+                            style: GoogleFonts.rubik(
+                                fontSize: 16, fontWeight: FontWeight.w600),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(bottom: 10),
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(10)),
+                        child: ListTile(
+                          contentPadding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                          title: Text("Jilbab Coklat",
+                              style: GoogleFonts.rubik(
+                                  fontSize: 16, fontWeight: FontWeight.w600)),
+                          subtitle: Text("Tue 12.10.2023",
+                              style:
+                                  GoogleFonts.rubik(color: Color(0xFF858585))),
+                          trailing: Text(
+                            "RP.12.500",
+                            style: GoogleFonts.rubik(
+                                fontSize: 16, fontWeight: FontWeight.w600),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(bottom: 10),
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(10)),
+                        child: ListTile(
+                          contentPadding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                          title: Text("Jilbab Coklat",
+                              style: GoogleFonts.rubik(
+                                  fontSize: 16, fontWeight: FontWeight.w600)),
+                          subtitle: Text("Tue 12.10.2023",
+                              style:
+                                  GoogleFonts.rubik(color: Color(0xFF858585))),
+                          trailing: Text(
+                            "RP.12.500",
+                            style: GoogleFonts.rubik(
+                                fontSize: 16, fontWeight: FontWeight.w600),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Align(
+                    alignment: Alignment.center,
+                    child: Text(
+                      'Show More',
+                      style: GoogleFonts.rubik(
+                          fontSize: 16, color: Color(0xFF48B979)),
+                    ))
               ],
             ),
           )
