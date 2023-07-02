@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AccountOverView extends StatelessWidget {
@@ -30,7 +31,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white.withOpacity(0.9),
+      backgroundColor: Colors.white,
       body: Stack(
         children: [
           Positioned(
@@ -93,7 +94,7 @@ class _HomeState extends State<Home> {
                   width: 327,
                   height: 197,
                   decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Color.fromARGB(255, 252, 252, 252),
                       borderRadius: BorderRadius.circular(10)),
                   child: Column(
                     children: [
@@ -131,7 +132,13 @@ class _HomeState extends State<Home> {
                                 end: Alignment.bottomRight),
                             borderRadius: BorderRadius.only(
                                 bottomLeft: Radius.circular(10),
-                                bottomRight: Radius.circular(10))),
+                                bottomRight: Radius.circular(10)),
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.grey,
+                                  offset: Offset(3, 3),
+                                  blurRadius: 10)
+                            ]),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -177,7 +184,7 @@ class _HomeState extends State<Home> {
                       Container(
                         margin: EdgeInsets.only(bottom: 10),
                         decoration: BoxDecoration(
-                            color: Colors.white,
+                            color: Color.fromARGB(255, 252, 252, 252),
                             borderRadius: BorderRadius.circular(10)),
                         child: ListTile(
                           contentPadding: EdgeInsets.fromLTRB(10, 0, 10, 0),
@@ -197,7 +204,7 @@ class _HomeState extends State<Home> {
                       Container(
                         margin: EdgeInsets.only(bottom: 10),
                         decoration: BoxDecoration(
-                            color: Colors.white,
+                            color: Color.fromARGB(255, 252, 252, 252),
                             borderRadius: BorderRadius.circular(10)),
                         child: ListTile(
                           contentPadding: EdgeInsets.fromLTRB(10, 0, 10, 0),
@@ -217,7 +224,7 @@ class _HomeState extends State<Home> {
                       Container(
                         margin: EdgeInsets.only(bottom: 10),
                         decoration: BoxDecoration(
-                            color: Colors.white,
+                            color: Color.fromARGB(255, 252, 252, 252),
                             borderRadius: BorderRadius.circular(10)),
                         child: ListTile(
                           contentPadding: EdgeInsets.fromLTRB(10, 0, 10, 0),
@@ -234,36 +241,36 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                       ),
-                      Container(
-                        margin: EdgeInsets.only(bottom: 10),
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(10)),
-                        child: ListTile(
-                          contentPadding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                          title: Text("Jilbab Coklat",
-                              style: GoogleFonts.rubik(
-                                  fontSize: 16, fontWeight: FontWeight.w600)),
-                          subtitle: Text("Tue 12.10.2023",
-                              style:
-                                  GoogleFonts.rubik(color: Color(0xFF858585))),
-                          trailing: Text(
-                            "RP.12.500",
-                            style: GoogleFonts.rubik(
-                                fontSize: 16, fontWeight: FontWeight.w600),
-                          ),
-                        ),
-                      ),
+                      // Container(
+                      //   margin: EdgeInsets.only(bottom: 10),
+                      //   decoration: BoxDecoration(
+                      //       color: Color.fromARGB(255, 252, 252, 252),
+                      //       borderRadius: BorderRadius.circular(10)),
+                      //   child: ListTile(
+                      //     contentPadding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                      //     title: Text("Jilbab Coklat",
+                      //         style: GoogleFonts.rubik(
+                      //             fontSize: 16, fontWeight: FontWeight.w600)),
+                      //     subtitle: Text("Tue 12.10.2023",
+                      //         style:
+                      //             GoogleFonts.rubik(color: Color(0xFF858585))),
+                      //     trailing: Text(
+                      //       "RP.12.500",
+                      //       style: GoogleFonts.rubik(
+                      //           fontSize: 16, fontWeight: FontWeight.w600),
+                      //     ),
+                      //   ),
+                      // ),
                     ],
                   ),
                 ),
-                Align(
-                    alignment: Alignment.center,
-                    child: Text(
-                      'Show More',
-                      style: GoogleFonts.rubik(
-                          fontSize: 16, color: Color(0xFF48B979)),
-                    ))
+                // Align(
+                //     alignment: Alignment.center,
+                //     child: Text(
+                //       'Show More',
+                //       style: GoogleFonts.rubik(
+                //           fontSize: 16, color: Color(0xFF48B979)),
+                //     ))
               ],
             ),
           )

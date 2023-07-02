@@ -1,14 +1,18 @@
+import 'package:cinta_bunda/page/account_overview.dart';
+import 'package:cinta_bunda/page/main_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       home: Home(),
     );
@@ -151,7 +155,9 @@ class _HomeState extends State<Home> {
                     height: 50,
                     child: ElevatedButton(
                       child: Text('Sign In'),
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.to(MainpageHome());
+                      },
                       style:
                           ElevatedButton.styleFrom(primary: Color(0xFF48B979)),
                     )),

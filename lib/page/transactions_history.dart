@@ -45,7 +45,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white.withOpacity(0.9),
+      backgroundColor: Colors.white,
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(90),
         child: AppBar(
@@ -133,7 +133,7 @@ class _HomeState extends State<Home> {
                   Container(
                     margin: EdgeInsets.only(bottom: 10),
                     decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: Color.fromARGB(255, 252, 252, 252),
                         borderRadius: BorderRadius.circular(10)),
                     child: ListTile(
                       contentPadding: EdgeInsets.fromLTRB(10, 0, 10, 0),
@@ -152,7 +152,7 @@ class _HomeState extends State<Home> {
                   Container(
                     margin: EdgeInsets.only(bottom: 10),
                     decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: Color.fromARGB(255, 252, 252, 252),
                         borderRadius: BorderRadius.circular(10)),
                     child: ListTile(
                       contentPadding: EdgeInsets.fromLTRB(10, 0, 10, 0),
@@ -171,7 +171,7 @@ class _HomeState extends State<Home> {
                   Container(
                     margin: EdgeInsets.only(bottom: 10),
                     decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: Color.fromARGB(255, 252, 252, 252),
                         borderRadius: BorderRadius.circular(10)),
                     child: ListTile(
                       contentPadding: EdgeInsets.fromLTRB(10, 0, 10, 0),
@@ -190,7 +190,7 @@ class _HomeState extends State<Home> {
                   Container(
                     margin: EdgeInsets.only(bottom: 10),
                     decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: Color.fromARGB(255, 252, 252, 252),
                         borderRadius: BorderRadius.circular(10)),
                     child: ListTile(
                       contentPadding: EdgeInsets.fromLTRB(10, 0, 10, 0),
@@ -209,7 +209,7 @@ class _HomeState extends State<Home> {
                   Container(
                     margin: EdgeInsets.only(bottom: 10),
                     decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: Color.fromARGB(255, 252, 252, 252),
                         borderRadius: BorderRadius.circular(10)),
                     child: ListTile(
                       contentPadding: EdgeInsets.fromLTRB(10, 0, 10, 0),
