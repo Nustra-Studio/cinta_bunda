@@ -110,8 +110,8 @@ class _HomeState extends State<Home> {
                           height: 15,
                           decoration: BoxDecoration(
                               color: current == index
-                                  ? Colors.white
-                                  : Color.fromARGB(255, 230, 230, 230),
+                                  ? Color.fromARGB(255, 230, 230, 230)
+                                  : Colors.white,
                               borderRadius: BorderRadius.circular(15)),
                           child: Center(
                             child: Text(
@@ -128,104 +128,259 @@ class _HomeState extends State<Home> {
             ),
             Container(
               width: double.infinity,
-              child: Column(
-                children: [
-                  Container(
-                    margin: EdgeInsets.only(bottom: 10),
-                    decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 252, 252, 252),
-                        borderRadius: BorderRadius.circular(10)),
-                    child: ListTile(
-                      contentPadding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                      title: Text("Jilbab Coklat",
+              height: 550,
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    Container(
+                      margin: EdgeInsets.only(bottom: 10),
+                      decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 252, 252, 252),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: ListTile(
+                        contentPadding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                        title: Text("Jilbab Coklat",
+                            style: GoogleFonts.rubik(
+                                fontSize: 16, fontWeight: FontWeight.w600)),
+                        subtitle: Text("Tue 12.10.2023",
+                            style: GoogleFonts.rubik(color: Color(0xFF858585))),
+                        trailing: Text(
+                          "RP.12.500",
                           style: GoogleFonts.rubik(
-                              fontSize: 16, fontWeight: FontWeight.w600)),
-                      subtitle: Text("Tue 12.10.2023",
-                          style: GoogleFonts.rubik(color: Color(0xFF858585))),
-                      trailing: Text(
-                        "RP.12.500",
-                        style: GoogleFonts.rubik(
-                            fontSize: 16, fontWeight: FontWeight.w600),
+                              fontSize: 16, fontWeight: FontWeight.w600),
+                        ),
                       ),
                     ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(bottom: 10),
-                    decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 252, 252, 252),
-                        borderRadius: BorderRadius.circular(10)),
-                    child: ListTile(
-                      contentPadding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                      title: Text("Jilbab Coklat",
+                    Container(
+                      margin: EdgeInsets.only(bottom: 10),
+                      decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 252, 252, 252),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: ListTile(
+                        contentPadding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                        title: Text("Jilbab Coklat",
+                            style: GoogleFonts.rubik(
+                                fontSize: 16, fontWeight: FontWeight.w600)),
+                        subtitle: Text("Tue 12.10.2023",
+                            style: GoogleFonts.rubik(color: Color(0xFF858585))),
+                        trailing: Text(
+                          "RP.12.500",
                           style: GoogleFonts.rubik(
-                              fontSize: 16, fontWeight: FontWeight.w600)),
-                      subtitle: Text("Tue 12.10.2023",
-                          style: GoogleFonts.rubik(color: Color(0xFF858585))),
-                      trailing: Text(
-                        "RP.12.500",
-                        style: GoogleFonts.rubik(
-                            fontSize: 16, fontWeight: FontWeight.w600),
+                              fontSize: 16, fontWeight: FontWeight.w600),
+                        ),
                       ),
                     ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(bottom: 10),
-                    decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 252, 252, 252),
-                        borderRadius: BorderRadius.circular(10)),
-                    child: ListTile(
-                      contentPadding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                      title: Text("Jilbab Coklat",
+                    Container(
+                      margin: EdgeInsets.only(bottom: 10),
+                      decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 252, 252, 252),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: ListTile(
+                        contentPadding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                        title: Text("Jilbab Coklat",
+                            style: GoogleFonts.rubik(
+                                fontSize: 16, fontWeight: FontWeight.w600)),
+                        subtitle: Text("Tue 12.10.2023",
+                            style: GoogleFonts.rubik(color: Color(0xFF858585))),
+                        trailing: Text(
+                          "RP.12.500",
                           style: GoogleFonts.rubik(
-                              fontSize: 16, fontWeight: FontWeight.w600)),
-                      subtitle: Text("Tue 12.10.2023",
-                          style: GoogleFonts.rubik(color: Color(0xFF858585))),
-                      trailing: Text(
-                        "RP.12.500",
-                        style: GoogleFonts.rubik(
-                            fontSize: 16, fontWeight: FontWeight.w600),
+                              fontSize: 16, fontWeight: FontWeight.w600),
+                        ),
                       ),
                     ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(bottom: 10),
-                    decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 252, 252, 252),
-                        borderRadius: BorderRadius.circular(10)),
-                    child: ListTile(
-                      contentPadding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                      title: Text("Jilbab Coklat",
+                    Container(
+                      margin: EdgeInsets.only(bottom: 10),
+                      decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 252, 252, 252),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: ListTile(
+                        contentPadding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                        title: Text("Jilbab Coklat",
+                            style: GoogleFonts.rubik(
+                                fontSize: 16, fontWeight: FontWeight.w600)),
+                        subtitle: Text("Tue 12.10.2023",
+                            style: GoogleFonts.rubik(color: Color(0xFF858585))),
+                        trailing: Text(
+                          "RP.12.500",
                           style: GoogleFonts.rubik(
-                              fontSize: 16, fontWeight: FontWeight.w600)),
-                      subtitle: Text("Tue 12.10.2023",
-                          style: GoogleFonts.rubik(color: Color(0xFF858585))),
-                      trailing: Text(
-                        "RP.12.500",
-                        style: GoogleFonts.rubik(
-                            fontSize: 16, fontWeight: FontWeight.w600),
+                              fontSize: 16, fontWeight: FontWeight.w600),
+                        ),
                       ),
                     ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(bottom: 10),
-                    decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 252, 252, 252),
-                        borderRadius: BorderRadius.circular(10)),
-                    child: ListTile(
-                      contentPadding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                      title: Text("Jilbab Coklat",
+                    Container(
+                      margin: EdgeInsets.only(bottom: 10),
+                      decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 252, 252, 252),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: ListTile(
+                        contentPadding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                        title: Text("Jilbab Coklat",
+                            style: GoogleFonts.rubik(
+                                fontSize: 16, fontWeight: FontWeight.w600)),
+                        subtitle: Text("Tue 12.10.2023",
+                            style: GoogleFonts.rubik(color: Color(0xFF858585))),
+                        trailing: Text(
+                          "RP.12.500",
                           style: GoogleFonts.rubik(
-                              fontSize: 16, fontWeight: FontWeight.w600)),
-                      subtitle: Text("Tue 12.10.2023",
-                          style: GoogleFonts.rubik(color: Color(0xFF858585))),
-                      trailing: Text(
-                        "RP.12.500",
-                        style: GoogleFonts.rubik(
-                            fontSize: 16, fontWeight: FontWeight.w600),
+                              fontSize: 16, fontWeight: FontWeight.w600),
+                        ),
                       ),
                     ),
-                  ),
-                ],
+                    Container(
+                      margin: EdgeInsets.only(bottom: 10),
+                      decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 252, 252, 252),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: ListTile(
+                        contentPadding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                        title: Text("Jilbab Coklat",
+                            style: GoogleFonts.rubik(
+                                fontSize: 16, fontWeight: FontWeight.w600)),
+                        subtitle: Text("Tue 12.10.2023",
+                            style: GoogleFonts.rubik(color: Color(0xFF858585))),
+                        trailing: Text(
+                          "RP.12.500",
+                          style: GoogleFonts.rubik(
+                              fontSize: 16, fontWeight: FontWeight.w600),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(bottom: 10),
+                      decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 252, 252, 252),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: ListTile(
+                        contentPadding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                        title: Text("Jilbab Coklat",
+                            style: GoogleFonts.rubik(
+                                fontSize: 16, fontWeight: FontWeight.w600)),
+                        subtitle: Text("Tue 12.10.2023",
+                            style: GoogleFonts.rubik(color: Color(0xFF858585))),
+                        trailing: Text(
+                          "RP.12.500",
+                          style: GoogleFonts.rubik(
+                              fontSize: 16, fontWeight: FontWeight.w600),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(bottom: 10),
+                      decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 252, 252, 252),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: ListTile(
+                        contentPadding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                        title: Text("Jilbab Coklat",
+                            style: GoogleFonts.rubik(
+                                fontSize: 16, fontWeight: FontWeight.w600)),
+                        subtitle: Text("Tue 12.10.2023",
+                            style: GoogleFonts.rubik(color: Color(0xFF858585))),
+                        trailing: Text(
+                          "RP.12.500",
+                          style: GoogleFonts.rubik(
+                              fontSize: 16, fontWeight: FontWeight.w600),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(bottom: 10),
+                      decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 252, 252, 252),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: ListTile(
+                        contentPadding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                        title: Text("Jilbab Coklat",
+                            style: GoogleFonts.rubik(
+                                fontSize: 16, fontWeight: FontWeight.w600)),
+                        subtitle: Text("Tue 12.10.2023",
+                            style: GoogleFonts.rubik(color: Color(0xFF858585))),
+                        trailing: Text(
+                          "RP.12.500",
+                          style: GoogleFonts.rubik(
+                              fontSize: 16, fontWeight: FontWeight.w600),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(bottom: 10),
+                      decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 252, 252, 252),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: ListTile(
+                        contentPadding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                        title: Text("Jilbab Coklat",
+                            style: GoogleFonts.rubik(
+                                fontSize: 16, fontWeight: FontWeight.w600)),
+                        subtitle: Text("Tue 12.10.2023",
+                            style: GoogleFonts.rubik(color: Color(0xFF858585))),
+                        trailing: Text(
+                          "RP.12.500",
+                          style: GoogleFonts.rubik(
+                              fontSize: 16, fontWeight: FontWeight.w600),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(bottom: 10),
+                      decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 252, 252, 252),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: ListTile(
+                        contentPadding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                        title: Text("Jilbab Coklat",
+                            style: GoogleFonts.rubik(
+                                fontSize: 16, fontWeight: FontWeight.w600)),
+                        subtitle: Text("Tue 12.10.2023",
+                            style: GoogleFonts.rubik(color: Color(0xFF858585))),
+                        trailing: Text(
+                          "RP.12.500",
+                          style: GoogleFonts.rubik(
+                              fontSize: 16, fontWeight: FontWeight.w600),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(bottom: 10),
+                      decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 252, 252, 252),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: ListTile(
+                        contentPadding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                        title: Text("Jilbab Coklat",
+                            style: GoogleFonts.rubik(
+                                fontSize: 16, fontWeight: FontWeight.w600)),
+                        subtitle: Text("Tue 12.10.2023",
+                            style: GoogleFonts.rubik(color: Color(0xFF858585))),
+                        trailing: Text(
+                          "RP.12.500",
+                          style: GoogleFonts.rubik(
+                              fontSize: 16, fontWeight: FontWeight.w600),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(bottom: 10),
+                      decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 252, 252, 252),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: ListTile(
+                        contentPadding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                        title: Text("Jilbab Coklat",
+                            style: GoogleFonts.rubik(
+                                fontSize: 16, fontWeight: FontWeight.w600)),
+                        subtitle: Text("Tue 12.10.2023",
+                            style: GoogleFonts.rubik(color: Color(0xFF858585))),
+                        trailing: Text(
+                          "RP.12.500",
+                          style: GoogleFonts.rubik(
+                              fontSize: 16, fontWeight: FontWeight.w600),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             )
           ],

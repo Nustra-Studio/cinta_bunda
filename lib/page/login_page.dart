@@ -106,6 +106,7 @@ class _HomeState extends State<Home> {
                 ),
                 child: TextField(
                   controller: phoneController,
+                  keyboardType: TextInputType.number,
                   decoration: InputDecoration(
                       prefixIcon: Icon(Icons.phone),
                       border: InputBorder.none,
