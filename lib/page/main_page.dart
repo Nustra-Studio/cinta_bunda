@@ -1,4 +1,5 @@
 import 'package:cinta_bunda/page/account_overview.dart';
+import 'package:cinta_bunda/page/setting_page.dart';
 import 'package:cinta_bunda/page/transactions_history.dart';
 
 import 'package:flutter/material.dart';
@@ -30,47 +31,44 @@ class _MainPageState extends State<MainPage> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: Stack(
-          children: [
-            Container(
-              color: Colors.white,
-            ),
-            SafeArea(
-                child: PageView(
-              controller: pageController,
-              onPageChanged: (index) {
+    return Scaffold(
+      body: Stack(
+        children: [
+          Container(
+            color: Colors.white,
+          ),
+          PageView(
+            controller: pageController,
+            onPageChanged: (index) {
+              setState(() {
+                selectedPage = index;
+              });
+            },
+            children: [
+              Center(
+                child: AccountOverView(),
+              ),
+              Center(
+                child: TransactionsHistory(),
+              ),
+              Center(
+                child: SettingPage(),
+              ),
+            ],
+          ),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: CustomBottomNavbar(
+              selectedIndex: selectedPage,
+              onTap: (index) {
                 setState(() {
                   selectedPage = index;
                 });
+                pageController.jumpToPage(selectedPage);
               },
-              children: [
-                Center(
-                  child: AccountOverView(),
-                ),
-                Center(
-                  child: TransactionsHistory(),
-                ),
-                Center(
-                  child: Text('Setting'),
-                ),
-              ],
-            )),
-            Align(
-              alignment: Alignment.bottomCenter,
-              child: CustomBottomNavbar(
-                selectedIndex: selectedPage,
-                onTap: (index) {
-                  setState(() {
-                    selectedPage = index;
-                  });
-                  pageController.jumpToPage(selectedPage);
-                },
-              ),
-            )
-          ],
-        ),
+            ),
+          )
+        ],
       ),
     );
   }
