@@ -6,6 +6,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:supercharged/supercharged.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key key}) : super(key: key);
@@ -55,8 +56,7 @@ class _HomeState extends State<Home> {
                   width: getCircleDiameter(context),
                   height: getCircleDiameter(context),
                   decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Color(0xFF00A056).withOpacity(0.63)),
+                      shape: BoxShape.circle, color: '00A056'.toColor()),
                 ),
               ),
               Center(
@@ -82,12 +82,11 @@ class _HomeState extends State<Home> {
                         decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(8),
-                            border: Border.all(color: Colors.black),
                             boxShadow: [
                               BoxShadow(
                                 color: Colors.grey,
-                                blurRadius: 4,
-                                offset: Offset(0, 4),
+                                blurRadius: 3,
+                                offset: Offset(0, 3),
                               )
                             ]),
                         child: TextField(
@@ -109,12 +108,11 @@ class _HomeState extends State<Home> {
                         decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(8),
-                            border: Border.all(color: Colors.black),
                             boxShadow: [
                               BoxShadow(
                                 color: Colors.grey,
-                                blurRadius: 4,
-                                offset: Offset(0, 4),
+                                blurRadius: 3,
+                                offset: Offset(0, 3),
                               )
                             ]),
                         child: TextField(
@@ -197,7 +195,7 @@ class _HomeState extends State<Home> {
                               style: ElevatedButton.styleFrom(
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(12)),
-                                primary: Color(0xFF48B979),
+                                primary: '48B979'.toColor(),
                               ),
                             )),
                       ),

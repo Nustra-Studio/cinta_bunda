@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:supercharged/supercharged.dart';
 
 class AccountOverView extends StatelessWidget {
   const AccountOverView({Key key}) : super(key: key);
@@ -42,8 +43,7 @@ class _HomeState extends State<Home> {
                 width: getCircleDiameter(context),
                 height: getCircleDiameter(context),
                 decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Color(0xFFA8CE45).withOpacity(1)),
+                    shape: BoxShape.circle, color: 'A8CE45'.toColor()),
               ),
             ),
             Positioned(

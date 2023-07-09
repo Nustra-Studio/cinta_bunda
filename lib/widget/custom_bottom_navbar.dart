@@ -15,11 +15,15 @@ class CustomBottomNavbar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 60,
+      margin: EdgeInsets.symmetric(horizontal: 50),
       width: double.infinity,
       color: Colors.white,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          Container(
+            width: 10,
+          ),
           GestureDetector(
             onTap: () {
               if (onTap != null) {
@@ -27,13 +31,13 @@ class CustomBottomNavbar extends StatelessWidget {
               }
             },
             child: Container(
-              width: 32,
-              height: 32,
+              width: 23,
+              height: 24,
               decoration: BoxDecoration(
                   image: DecorationImage(
                       image: AssetImage('assets/Home' +
                           ((selectedIndex == 0) ? '.png' : '_normal.png')),
-                      fit: BoxFit.contain)),
+                      fit: BoxFit.cover)),
             ),
           ),
           GestureDetector(
@@ -43,14 +47,14 @@ class CustomBottomNavbar extends StatelessWidget {
               }
             },
             child: Container(
-              width: 32,
-              height: 32,
+              width: 23,
+              height: 24,
               margin: EdgeInsets.symmetric(horizontal: 83),
               decoration: BoxDecoration(
                   image: DecorationImage(
                       image: AssetImage('assets/Document' +
                           ((selectedIndex == 1) ? '.png' : '_normal.png')),
-                      fit: BoxFit.contain)),
+                      fit: BoxFit.cover)),
             ),
           ),
           GestureDetector(
@@ -60,15 +64,18 @@ class CustomBottomNavbar extends StatelessWidget {
               }
             },
             child: Container(
-              width: 32,
-              height: 32,
+              width: 28,
+              height: 28,
               decoration: BoxDecoration(
                   image: DecorationImage(
                       image: AssetImage('assets/Setting' +
                           ((selectedIndex == 2) ? '.png' : '_normal.png')),
-                      fit: BoxFit.contain)),
+                      fit: BoxFit.cover)),
             ),
           ),
+          Container(
+            width: 10,
+          )
         ],
       ),
     );

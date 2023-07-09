@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:supercharged/supercharged.dart';
 
 class SettingPage extends StatelessWidget {
   const SettingPage({Key key}) : super(key: key);
@@ -45,7 +46,7 @@ class _HomeState extends State<Home> {
               Container(
                 height: 100,
                 width: double.infinity,
-                color: Color(0xFF00A056).withOpacity(0.60),
+                color: '00A056'.toColor().withOpacity(0.85),
               ),
               Column(
                 children: [
@@ -112,12 +113,11 @@ class _HomeState extends State<Home> {
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(8),
-                        border: Border.all(color: Colors.black),
                         boxShadow: [
                           BoxShadow(
                             color: Colors.grey,
-                            blurRadius: 4,
-                            offset: Offset(0, 4),
+                            blurRadius: 3,
+                            offset: Offset(0, 3),
                           )
                         ]),
                     child: TextField(
@@ -142,12 +142,11 @@ class _HomeState extends State<Home> {
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(8),
-                        border: Border.all(color: Colors.black),
                         boxShadow: [
                           BoxShadow(
                             color: Colors.grey,
-                            blurRadius: 4,
-                            offset: Offset(0, 4),
+                            blurRadius: 3,
+                            offset: Offset(0, 3),
                           )
                         ]),
                     child: TextField(
@@ -172,12 +171,11 @@ class _HomeState extends State<Home> {
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(8),
-                        border: Border.all(color: Colors.black),
                         boxShadow: [
                           BoxShadow(
                             color: Colors.grey,
-                            blurRadius: 4,
-                            offset: Offset(0, 4),
+                            blurRadius: 3,
+                            offset: Offset(0, 3),
                           )
                         ]),
                     child: TextField(
@@ -214,7 +212,7 @@ class _HomeState extends State<Home> {
                           ),
                           onPressed: () {},
                           style: ElevatedButton.styleFrom(
-                              primary: Color(0xFF00A056).withOpacity(0.6),
+                              primary: '00A056'.toColor().withOpacity(0.6),
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(12)))),
                     ),
@@ -236,7 +234,7 @@ class _HomeState extends State<Home> {
                           ),
                           onPressed: () {},
                           style: ElevatedButton.styleFrom(
-                              primary: Color(0xFFFF0000).withOpacity(0.6),
+                              primary: 'FF0000'.toColor(),
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(12)))),
                     ),
