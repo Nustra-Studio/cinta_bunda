@@ -15,14 +15,16 @@ class CustomBottomNavbar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 60,
-      margin: EdgeInsets.symmetric(horizontal: 50),
       width: double.infinity,
       color: Colors.white,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Container(
-            width: 10,
+          GestureDetector(
+            child: Container(
+              width: 28,
+              height: 24,
+            ),
           ),
           GestureDetector(
             onTap: () {
@@ -73,9 +75,12 @@ class CustomBottomNavbar extends StatelessWidget {
                       fit: BoxFit.cover)),
             ),
           ),
-          Container(
-            width: 10,
-          )
+          GestureDetector(
+            child: Container(
+              width: 28,
+              height: 24,
+            ),
+          ),
         ],
       ),
     );
