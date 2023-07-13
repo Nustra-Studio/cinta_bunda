@@ -1,7 +1,7 @@
-import 'package:cinta_bunda/page/account_overview.dart';
-import 'package:cinta_bunda/page/login_page.dart';
-import 'package:cinta_bunda/page/main_page.dart';
-import 'package:cinta_bunda/page/transactions_history.dart';
+import 'package:cinta_bunda/pages/account_overview.dart';
+import 'package:cinta_bunda/pages/login_page.dart';
+import 'package:cinta_bunda/pages/main_page.dart';
+import 'package:cinta_bunda/pages/transactions_history.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 

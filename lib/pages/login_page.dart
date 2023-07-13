@@ -1,5 +1,5 @@
-import 'package:cinta_bunda/page/account_overview.dart';
-import 'package:cinta_bunda/page/main_page.dart';
+import 'package:cinta_bunda/pages/account_overview.dart';
+import 'package:cinta_bunda/pages/main_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/container.dart';
@@ -7,6 +7,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:supercharged/supercharged.dart';
+import 'package:cinta_bunda/controllers/login_controller.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key key}) : super(key: key);
@@ -37,11 +38,10 @@ class _HomeState extends State<Home> {
   }
 
   String _Password = '';
-
+  // TextEditingController phoneController = TextEditingController();
+  // TextEditingController passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    TextEditingController phoneController = TextEditingController();
-    TextEditingController passwordController = TextEditingController();
     double getCircleDiameter(BuildContext context) =>
         MediaQuery.of(context).size.width * 7 / 1.8;
     return Scaffold(
@@ -90,7 +90,7 @@ class _HomeState extends State<Home> {
                               )
                             ]),
                         child: TextField(
-                          controller: phoneController,
+                          controller: LoginController.phoneController,
                           keyboardType: TextInputType.number,
                           decoration: InputDecoration(
                               prefixIcon: Icon(Icons.phone),
@@ -118,16 +118,16 @@ class _HomeState extends State<Home> {
                         child: TextField(
                           keyboardType: TextInputType.text,
                           obscureText: _obscureText,
-                          controller: passwordController,
+                          controller: LoginController.passwordController,
                           decoration: InputDecoration(
                             prefixIcon: Icon(Icons.lock_open),
-                            suffixIcon: GestureDetector(
-                              onTap: () {
+                            suffixIcon: IconButton(
+                              onPressed: () {
                                 setState(() {
                                   _obscureText = !_obscureText;
                                 });
                               },
-                              child: Icon(_obscureText
+                              icon: Icon(_obscureText
                                   ? Icons.visibility
                                   : Icons.visibility_off),
                             ),
@@ -190,7 +190,8 @@ class _HomeState extends State<Home> {
                             child: ElevatedButton(
                               child: Text('Masuk Sekarang'),
                               onPressed: () {
-                                Get.to(MainpageHome());
+                                // Get.to(() => MainpageHome());
+                                LoginController().auth();
                               },
                               style: ElevatedButton.styleFrom(
                                 shape: RoundedRectangleBorder(

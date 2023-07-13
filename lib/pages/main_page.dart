@@ -1,6 +1,6 @@
-import 'package:cinta_bunda/page/account_overview.dart';
-import 'package:cinta_bunda/page/setting_page.dart';
-import 'package:cinta_bunda/page/transactions_history.dart';
+import 'package:cinta_bunda/pages/account_overview.dart';
+import 'package:cinta_bunda/pages/setting_page.dart';
+import 'package:cinta_bunda/pages/transactions_history.dart';
 
 import 'package:flutter/material.dart';
 

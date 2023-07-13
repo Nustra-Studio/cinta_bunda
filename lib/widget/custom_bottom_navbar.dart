@@ -21,12 +21,6 @@ class CustomBottomNavbar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           GestureDetector(
-            child: Container(
-              width: 28,
-              height: 24,
-            ),
-          ),
-          GestureDetector(
             onTap: () {
               if (onTap != null) {
                 onTap(0);
@@ -66,19 +60,13 @@ class CustomBottomNavbar extends StatelessWidget {
               }
             },
             child: Container(
-              width: 28,
-              height: 28,
+              width: 23,
+              height: 24,
               decoration: BoxDecoration(
                   image: DecorationImage(
                       image: AssetImage('assets/Setting' +
                           ((selectedIndex == 2) ? '.png' : '_normal.png')),
                       fit: BoxFit.cover)),
-            ),
-          ),
-          GestureDetector(
-            child: Container(
-              width: 28,
-              height: 24,
             ),
           ),
         ],
