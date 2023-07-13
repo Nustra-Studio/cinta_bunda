@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sp_util/sp_util.dart';
 import 'package:supercharged/supercharged.dart';
 
 class AccountOverView extends StatelessWidget {
@@ -72,6 +73,7 @@ class _HomeState extends State<Home> {
                                 image: AssetImage('assets/logo.png'))),
                       ),
                       Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text('Good morning',
                               style: GoogleFonts.rubik(fontSize: 17)),
@@ -79,7 +81,7 @@ class _HomeState extends State<Home> {
                             height: 10,
                           ),
                           Text(
-                            '08195648213',
+                            '${SpUtil.getString('nomor')}',
                             style: GoogleFonts.rubik(
                                 fontSize: 17, fontWeight: FontWeight.w700),
                           ),

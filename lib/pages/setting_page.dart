@@ -1,7 +1,10 @@
+import 'package:cinta_bunda/pages/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:get/get.dart';
+import 'package:sp_util/sp_util.dart';
 import 'package:supercharged/supercharged.dart';
 
 class SettingPage extends StatelessWidget {
@@ -232,7 +235,10 @@ class _HomeState extends State<Home> {
                               Icon(Icons.logout_outlined)
                             ],
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            SpUtil.clear();
+                            Get.offAll(LoginPage());
+                          },
                           style: ElevatedButton.styleFrom(
                               primary: 'FF0000'.toColor(),
                               shape: RoundedRectangleBorder(
