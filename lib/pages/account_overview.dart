@@ -28,7 +28,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   double getCircleDiameter(BuildContext context) =>
-      MediaQuery.of(context).size.width * 2 / 3.5;
+      MediaQuery.of(context).size.width * 2 / 4;
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +49,7 @@ class _HomeState extends State<Home> {
             ),
             Positioned(
               left: -getCircleDiameter(context) / 2.5,
-              bottom: -getCircleDiameter(context) / -0.7,
+              bottom: -getCircleDiameter(context) / -0.58,
               child: Container(
                 width: getCircleDiameter(context),
                 height: getCircleDiameter(context),
@@ -62,10 +62,13 @@ class _HomeState extends State<Home> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  SizedBox(
+                    height: 10,
+                  ),
                   Row(
                     children: [
                       Container(
-                        margin: EdgeInsets.only(right: 10),
+                        // margin: EdgeInsets.only(right: 1),
                         width: 98,
                         height: 86,
                         decoration: BoxDecoration(
@@ -76,21 +79,21 @@ class _HomeState extends State<Home> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text('Good morning',
-                              style: GoogleFonts.rubik(fontSize: 17)),
-                          SizedBox(
-                            height: 10,
-                          ),
+                              style: GoogleFonts.rubik(fontSize: 14)),
+                          // SizedBox(
+                          //   height: 5,
+                          // ),
                           Text(
                             '${SpUtil.getString('nomor')}',
                             style: GoogleFonts.rubik(
-                                fontSize: 17, fontWeight: FontWeight.w700),
+                                fontSize: 14, fontWeight: FontWeight.w700),
                           ),
                         ],
                       )
                     ],
                   ),
                   SizedBox(
-                    height: 40,
+                    height: 15,
                   ),
                   Container(
                     margin: EdgeInsets.fromLTRB(24, 0, 24, 0),
