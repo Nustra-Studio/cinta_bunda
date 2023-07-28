@@ -1,3 +1,4 @@
+import 'package:cinta_bunda/controllers/setting_controller.dart';
 import 'package:cinta_bunda/pages/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
@@ -38,9 +39,6 @@ class _HomeState extends State<Home> {
   String _Password = '';
   @override
   Widget build(BuildContext context) {
-    TextEditingController UsernameController = TextEditingController();
-    TextEditingController EmailController = TextEditingController();
-    TextEditingController PasswordController = TextEditingController();
     return Scaffold(
       body: ListView(
         children: [
@@ -124,7 +122,7 @@ class _HomeState extends State<Home> {
                           )
                         ]),
                     child: TextField(
-                      controller: UsernameController,
+                      controller: SettingController.UsernameController,
                       decoration: InputDecoration(
                           prefixIcon: Icon(Icons.person_outline),
                           border: InputBorder.none,
@@ -153,7 +151,7 @@ class _HomeState extends State<Home> {
                           )
                         ]),
                     child: TextField(
-                      controller: EmailController,
+                      controller: SettingController.EmailController,
                       decoration: InputDecoration(
                           prefixIcon: Icon(Icons.email_outlined),
                           border: InputBorder.none,
@@ -184,19 +182,29 @@ class _HomeState extends State<Home> {
                     child: TextField(
                       keyboardType: TextInputType.text,
                       obscureText: _obscureText,
-                      controller: PasswordController,
+                      controller: SettingController.PasswordController,
                       decoration: InputDecoration(
                         prefixIcon: Icon(Icons.lock_open),
-                        suffixIcon: GestureDetector(
-                          onTap: () {
+                        suffixIcon: IconButton(
+                          onPressed: () {
                             setState(() {
                               _obscureText = !_obscureText;
                             });
                           },
-                          child: Icon(_obscureText
+                          icon: Icon(_obscureText
                               ? Icons.visibility
                               : Icons.visibility_off),
                         ),
+                        // GestureDetector(
+                        //   onTap: () {
+                        //     setState(() {
+                        //       _obscureText = !_obscureText;
+                        //     });
+                        //   },
+                        //   child: Icon(_obscureText
+                        //       ? Icons.visibility
+                        //       : Icons.visibility_off),
+                        // ),
                         border: InputBorder.none,
                         hintText: 'Password',
                       ),
@@ -213,7 +221,9 @@ class _HomeState extends State<Home> {
                             style: TextStyle(
                                 fontSize: 15, fontWeight: FontWeight.w700),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            SettingController().updateData();
+                          },
                           style: ElevatedButton.styleFrom(
                               primary: '00A056'.toColor().withOpacity(0.6),
                               shape: RoundedRectangleBorder(

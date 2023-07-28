@@ -25,6 +25,7 @@ class LoginController extends GetxController {
           var data = responeBody['data'];
           SpUtil.putString('token', responeBody['access_token']);
           SpUtil.putString('nomor', data['phone']);
+          SpUtil.putString('uuid', data['uuid']);
           SpUtil.putBool('isLogin', true);
           Get.offAll(MainpageHome());
           Get.snackbar('Success', 'Login Berhasil',
