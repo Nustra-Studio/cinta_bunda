@@ -1,5 +1,7 @@
+import 'package:cinta_bunda/controllers/logout_controller.dart';
 import 'package:cinta_bunda/controllers/setting_controller.dart';
 import 'package:cinta_bunda/pages/login_page.dart';
+import 'package:cinta_bunda/pages/main_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/container.dart';
@@ -7,6 +9,8 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
 import 'package:sp_util/sp_util.dart';
 import 'package:supercharged/supercharged.dart';
+
+import '../controllers/login_controller.dart';
 
 class SettingPage extends StatelessWidget {
   const SettingPage({Key key}) : super(key: key);
@@ -37,6 +41,19 @@ class _HomeState extends State<Home> {
   }
 
   String _Password = '';
+
+  void initData() {
+    SettingController.UsernameController.text = "${SpUtil.getString('nama')}";
+    SettingController.EmailController.text = "${SpUtil.getString('email')}";
+  }
+
+  @override
+  void initState() {
+    initData();
+
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -222,7 +239,17 @@ class _HomeState extends State<Home> {
                                 fontSize: 15, fontWeight: FontWeight.w700),
                           ),
                           onPressed: () {
-                            SettingController().updateData();
+                            Get.defaultDialog(
+                                title: "Update Data?",
+                                textConfirm: "Ya",
+                                textCancel: "Tidak",
+                                content: Container(),
+                                confirmTextColor: Colors.white,
+                                onConfirm: () async {
+                                  Get.back();
+                                  SettingController().updateData();
+                                  Logout().logout();
+                                });
                           },
                           style: ElevatedButton.styleFrom(
                               primary: '00A056'.toColor().withOpacity(0.6),
@@ -246,8 +273,7 @@ class _HomeState extends State<Home> {
                             ],
                           ),
                           onPressed: () {
-                            SpUtil.clear();
-                            Get.offAll(LoginPage());
+                            Logout().logout();
                           },
                           style: ElevatedButton.styleFrom(
                               primary: 'FF0000'.toColor(),

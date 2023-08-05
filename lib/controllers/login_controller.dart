@@ -1,3 +1,4 @@
+import 'package:cinta_bunda/controllers/logout_controller.dart';
 import 'package:cinta_bunda/pages/main_page.dart';
 import 'package:cinta_bunda/providers/login_provider.dart';
 import 'package:flutter/material.dart';
@@ -26,11 +27,14 @@ class LoginController extends GetxController {
           SpUtil.putString('token', responeBody['access_token']);
           SpUtil.putString('nomor', data['phone']);
           SpUtil.putString('uuid', data['uuid']);
+          SpUtil.putString('nama', data['nama']);
+          SpUtil.putString('email', data['email']);
           SpUtil.putBool('isLogin', true);
           Get.offAll(MainpageHome());
           Get.snackbar('Success', 'Login Berhasil',
               backgroundColor: Color.fromARGB(255, 75, 212, 146),
               colorText: Colors.white);
+          Logout().autoLogout();
         } else {
           Get.snackbar('Error', 'Login Gagal',
               backgroundColor: Colors.red, colorText: Colors.white);

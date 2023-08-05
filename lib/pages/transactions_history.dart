@@ -4,6 +4,7 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:intl/intl.dart';
 
 class TransactionsHistory extends StatelessWidget {
   const TransactionsHistory({Key key}) : super(key: key);
@@ -44,6 +45,10 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
+    var now = new DateTime.now();
+    var formatter = new DateFormat('y');
+    String formattedDate = formatter.format(now);
+
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: PreferredSize(
@@ -69,7 +74,7 @@ class _HomeState extends State<Home> {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 10),
-                    child: Text('2023',
+                    child: Text('${formattedDate}',
                         style: GoogleFonts.rubik(
                             fontWeight: FontWeight.w500,
                             color: Color(0xFF858585).withOpacity(0.8))),
