@@ -21,6 +21,6 @@ class Logout extends GetxController {
     if (authTimer != null) {
       authTimer.cancel();
     }
-    authTimer = Timer(Duration(minutes: 10), logout);
+    authTimer = Timer(Duration(minutes: 5), logout);
   }
 }
