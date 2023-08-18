@@ -47,7 +47,6 @@ class _HomeState extends State<Home> {
   @override
   void initState() {
     fetchData();
-
     setState(() {});
     super.initState();
   }

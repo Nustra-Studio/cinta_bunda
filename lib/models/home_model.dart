@@ -2,12 +2,14 @@ class HomeData {
   final String phone;
   final String poin;
   final String randomKode;
+  final String email;
   final List<Transaction> transaksi;
 
   const HomeData({
     this.phone,
     this.poin,
     this.randomKode,
+    this.email,
     this.transaksi,
   });
 
@@ -16,6 +18,7 @@ class HomeData {
         phone: json["member"]["phone"] ?? '',
         poin: json["poin"]["poin"] ?? '0',
         randomKode: json['member']['random_kode'] ?? '',
+        email: json['member']['email'] ?? '',
         transaksi: List<Transaction>.from(
             json['transaction'].map((value) => Transaction.fromJson(value)) ??
                 []));

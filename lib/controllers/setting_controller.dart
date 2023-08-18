@@ -22,12 +22,6 @@ class SettingController extends GetxController {
     };
     SettingProvider().auth(data).then((value) {
       if (value.statusCode == 200) {
-        // var responeBody = value.body;
-        // var data = responeBody['data'];
-        // SpUtil.putString('token', responeBody['access_token']);
-        // SpUtil.putString('nomor', data['phone']);
-        // SpUtil.putBool('isLogin', true);
-        // Get.offAll(MainpageHome());
         Get.snackbar('Success', 'Update Berhasil',
             backgroundColor: Color.fromARGB(255, 75, 212, 146),
             colorText: Colors.white);

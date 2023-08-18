@@ -18,9 +18,9 @@ class Logout extends GetxController {
   }
 
   void autoLogout() {
-    if (authTimer != null) {
-      authTimer.cancel();
-    }
+    // if (authTimer != null) {
+    //   authTimer.cancel();
+    // }
     authTimer = Timer(Duration(minutes: 5), logout);
   }
 }

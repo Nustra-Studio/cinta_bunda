@@ -28,7 +28,7 @@ class LoginController extends GetxController {
           SpUtil.putString('nomor', data['phone']);
           SpUtil.putString('uuid', data['uuid']);
           SpUtil.putString('nama', data['nama']);
-          SpUtil.putString('email', data['email']);
+          // SpUtil.putString('email', data['email']);
           SpUtil.putBool('isLogin', true);
           Get.offAll(MainpageHome());
           Get.snackbar('Success', 'Login Berhasil',

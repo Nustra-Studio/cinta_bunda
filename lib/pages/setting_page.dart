@@ -11,6 +11,8 @@ import 'package:sp_util/sp_util.dart';
 import 'package:supercharged/supercharged.dart';
 
 import '../controllers/login_controller.dart';
+import '../models/home_model.dart';
+import '../providers/home_provider.dart';
 
 class SettingPage extends StatelessWidget {
   const SettingPage({Key key}) : super(key: key);
@@ -42,15 +44,24 @@ class _HomeState extends State<Home> {
 
   String _Password = '';
 
-  void initData() {
+  HomeData homeData = HomeData();
+  HomeProvider homeProvider = HomeProvider();
+
+  fetchData() async {
+    homeData = await homeProvider.fetchData();
+    setState(() {});
+  }
+
+  void initData() async {
+    await fetchData();
     SettingController.UsernameController.text = "${SpUtil.getString('nama')}";
-    SettingController.EmailController.text = "${SpUtil.getString('email')}";
+    SettingController.EmailController.text = "${homeData.email}";
   }
 
   @override
   void initState() {
     initData();
-
+    setState(() {});
     super.initState();
   }
 

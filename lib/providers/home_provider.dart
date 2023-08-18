@@ -18,7 +18,7 @@ class HomeProvider {
       final newURI = uri.replace(queryParameters: params);
 
       final response = await http.get(newURI);
-      print(response.body);
+
       if (response.statusCode == 200) {
         // Iterable it = jsonDecode(response.body);
         // List<HomeData> homeData = it.map((e) => HomeData.fromJson(e)).toList();
