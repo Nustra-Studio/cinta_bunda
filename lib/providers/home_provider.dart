@@ -22,7 +22,7 @@ class HomeProvider {
       if (response.statusCode == 200) {
         return HomeData.fromJson(jsonDecode(response.body));
       } else {
-        throw Exception('failed to load data');
+         Exception('failed to load data');
       }
     } catch (e) {
       print(e.toString());

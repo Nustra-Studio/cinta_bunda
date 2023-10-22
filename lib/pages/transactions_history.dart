@@ -152,10 +152,10 @@ class _HomeState extends State<Home> {
               ),
             ),
             Container(
-                margin: EdgeInsets.symmetric(horizontal: 20),
+                margin: EdgeInsets.symmetric(horizontal: 0),
                 child: Column(
                   children: [
-                    (listTransaction.length < 0)
+                    (listTransaction.length != 0)
                         ? SizedBox(
                             height: 600,
                             child: ListView.builder(
@@ -190,13 +190,15 @@ class _HomeState extends State<Home> {
                                   );
                                 })),
                           )
-                        : Center(
-                            child: Text(
-                              'No Data',
-                              style: GoogleFonts.rubik(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.white),
+                        : SizedBox(
+                            child: Center(
+                              child: Text(
+                                'No Data',
+                                style: GoogleFonts.rubik(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.white),
+                              ),
                             ),
                           )
                   ],

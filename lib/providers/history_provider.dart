@@ -20,8 +20,7 @@ class TransactionProvider {
       final newURI = uri.replace(queryParameters: queryParams);
 
       final response = await http.get(newURI);
-      print(response.statusCode);
-      print(response.body);
+
       if (response.statusCode == 200) {
         return TransactionData.fromJson(jsonDecode(response.body));
       } else {
