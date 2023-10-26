@@ -2,7 +2,7 @@
     package="com.example.cinta_bunda">
     <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="cinta_bunda"
+        android:label="Member CintaBunda"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
